@@ -366,13 +366,21 @@
 body {
     background-color: brown;
     font-family: 'Merriweather Sans', sans-serif;
+    min-height: 100vh;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
 }
 
 a {
     text-decoration: none;
+    transition: color 200ms ease-in-out
 }
 
-.mobile-navmenu {
+ul {
+  list-style: none;
+}
+
+.mobile--navmenu {
     display: none;
 }
 
@@ -382,7 +390,6 @@ a {
 
 .link--header {
     color: lightgrey;
-    transition: color 200ms ease-in-out
 }
 
 .link--header:hover {
@@ -403,7 +410,6 @@ a {
     padding: 20px 0;
     margin: 0;
     display: flex;
-    list-style: none;
     justify-content: space-around;
     align-items: center;
 }
@@ -467,8 +473,7 @@ a {
         display: none;
     }
 
-    .mobile-navmenu {
-        display: block;
+    .mobile--navmenu {
         background: var(--dark-gray);
     }
 
@@ -503,3 +508,84 @@ a {
         min-width: 150px;
     }
 }
+
+/**
+  Main Gallery Styling
+*/
+
+.imagelinks--container {
+  margin: 30px 0;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.imagelinks--list {
+  display: flex;
+}
+
+.imagelinks--list a {
+  color: var(--dark-gray);
+  margin: 0 10px;
+}
+
+.imagelinks--list a:hover {
+  color: gray;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+}
+
+.project {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: aqua;
+}
+
+.overlay {
+  position: absolute;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+}
+
+/**
+  Footer Styling
+*/
+
+.footer {
+  margin: 0;
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  color: var(--light-gray);
+  background-color: var(--dark-gray);
+}
+
+.year {
+  color: gray;
+}
+
+.name {
+  font-weight: bold;
+}
+
+.logo--footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.list--footer {
+  display: flex;
+  align-self: center;
+} 
+
+.list--footer > li{
+  margin: 0 10px;
+} 

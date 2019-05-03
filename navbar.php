@@ -21,12 +21,12 @@
     </ul>
 </header>
 
-<section class="mobile-navmenu">
-    <form action="" method="get">
+<section class="mobile--navmenu">
+    <form class="mobile--searchbar" action="" method="get">
         <input class="searchbar--header" type="text" name="search" placeholder="Search...">
         <input class="btn-hidden" type="submit">
     </form>
-    <nav class="mobile-navbar">
+    <nav class="mobile--navbar">
         <ul class="list--header list--navbar">
             <li><a href="#" class="link--header">About</a></li>
             <li><a href="#" class="link--header">Users</a></li>
@@ -34,7 +34,7 @@
             <li><a href="#" class="link--header">FAQ</a></li>
         </ul>
     </nav>
-    <ul class="list--header signin--list">
+    <ul class="mobile--signin list--header signin--list">
         <li><a href="#" class="link--header">Sign up</a></li>
         <li><a href="#" class="link--header">Sign in</a></li>
     </ul>
