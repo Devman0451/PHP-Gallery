@@ -364,7 +364,6 @@
 }
 
 body {
-    background-color: brown;
     font-family: 'Merriweather Sans', sans-serif;
     min-height: 100vh;
     display: grid;
@@ -374,6 +373,16 @@ body {
 a {
     text-decoration: none;
     transition: color 200ms ease-in-out
+}
+
+svg {
+  fill: white;
+}
+
+.Background {
+  background: gray;
+  width: 50px;
+  border-radius: 50%;
 }
 
 ul {
@@ -522,6 +531,7 @@ ul {
 
 .imagelinks--list {
   display: flex;
+  padding: 0;
 }
 
 .imagelinks--list a {
@@ -553,6 +563,110 @@ ul {
   width: 100%;
   height: 100%;
 }
+
+@media screen and (max-width: 1500px) {
+  
+  .gallery {
+    grid-template-columns: repeat(7, 1fr);
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  
+  .gallery {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  
+  .gallery {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+@media screen and (max-width: 800px) {
+  
+  .gallery {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 400px) {
+  
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/**
+  Contact Styling
+*/
+
+.contact {
+  background-color: rgb(45, 45, 45);
+  color: var(--light-gray);
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.newsletter {
+  margin-bottom: 30px;
+}
+
+.container--contact {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.container--contact h5{
+  font-size: 20px;
+}
+
+.container--contact p{
+  max-width: 300px;
+}
+
+.btn-subscribe {
+  background-color:  rgb(45, 45, 45);
+  border: 1px solid var(--light-gray);
+  color: var(--light-gray);
+  font-size: 12px;
+  padding: 5px 10px;
+  border-radius: 2px;
+  transition: all 200ms ease-in-out
+}
+
+.btn-subscribe:hover {
+  background-color:  var(--light-gray);
+  color: var(--dark-gray);
+  cursor: pointer;
+}
+
+.list--contact {
+  display: flex;
+  padding: 0;
+}
+
+.list--contact a {
+  color: var(--light-gray);
+  font-size: 25px;
+  margin: 0 20px;
+}
+
+.list--contact a:hover {
+  color: gray;
+}
+
 
 /**
   Footer Styling
