@@ -27,7 +27,7 @@
 
     <ul class="list--header signin--list">
         <li><a href="signup.php" class="link--header">Sign up</a></li>
-        <li><a href="#" class="link--header">Sign in</a></li>
+        <li><a href="signin.php" class="link--header">Sign in</a></li>
     </ul>
 </header>
 
@@ -45,7 +45,7 @@
         </ul>
     </nav>
     <ul class="mobile--signin list--header signin--list">
-        <li><a href="#" class="link--header">Sign up</a></li>
-        <li><a href="#" class="link--header">Sign in</a></li>
+        <li><a href="signup.php" class="link--header">Sign up</a></li>
+        <li><a href="signin.php" class="link--header">Sign in</a></li>
     </ul>
 </section>
