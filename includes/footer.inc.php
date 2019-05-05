@@ -4,8 +4,8 @@
                     <h5>Newsletter</h5>
                     <p>Subscribe to our newsletter to get awesome artwork in your mailbox weekly.</p>
                     <form class="newsletter-form" action="" method="get">
-                        <input class="searchbar--header" type="text" name="email" placeholder="Email">
-                        <input class="btn-subscribe" type="submit">
+                        <input class="searchbar--header subscribebar" type="text" name="email" placeholder="Email">
+                        <input class="btn-subscribe" type="submit" value="Subscribe">
                     </form>
                 </div>
                 <div class="connect">
@@ -39,10 +39,14 @@
             </div>
 
             <ul class="list--footer navbar--list">
-                <li><span class="year">&copy; 2019</span> <span class="name">Justin Myers</span></li> |
-                <li><a href="support.php" class="link--header">Support</a></li> |
-                <li><a href="tos.php" class="link--header">Terms of Service</a></li> |
-                <li><a href="privacy.php" class="link--header">Privacy Policy</a></li> |
+                <li><span class="year">&copy; 2019</span> <span class="name">Justin Myers</span></li> 
+                <li class="verticalbar">|</li>
+                <li><a href="support.php" class="link--header">Support</a></li> 
+                <li class="verticalbar">|</li>
+                <li><a href="tos.php" class="link--header">Terms of Service</a></li> 
+                <li class="verticalbar">|</li>
+                <li><a href="privacy.php" class="link--header">Privacy Policy</a></li> 
+                <li class="verticalbar">|</li>
                 <li><a href="faq.php" class="link--header">FAQ</a></li>
             </ul>
         </footer>

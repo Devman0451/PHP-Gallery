@@ -454,7 +454,7 @@ ul {
     border: 1px solid gray;
     padding: 3px;
     border-radius: 3px;
-    transition: all 200ms ease-in-out
+    transition: all 200ms ease-in-out;
 }
 
 .searchbar--header:focus {
@@ -825,6 +825,50 @@ ul {
   color: gray;
 }
 
+@media screen and (max-width: 950px) {
+  .subscribebar {
+    max-width: 302px;
+  }
+
+  .btn-subscribe {
+    display: block;
+    font-size: 16px;
+    width: 322px;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .container--contact {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .container--contact p{
+    max-width: 100%;
+  }
+
+  .list--contact {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .newsletter-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .subscribebar {
+    width: auto;
+  }
+
+  .btn-subscribe {
+    font-size: 16px;
+    width: 217px;
+  }
+}
+
 
 /**
   Footer Styling
@@ -860,4 +904,26 @@ ul {
 
 .list--footer > li{
   margin: 0 10px;
+} 
+
+@media screen and (max-width: 750px) {
+  .footer {
+    flex-direction: column;
+  }
+} 
+
+@media screen and (max-width: 500px) {
+  .footer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .list--footer{
+    flex-direction: column;
+    padding: 0;
+  }
+
+  .verticalbar {
+    display: none;
+  }
 } 
