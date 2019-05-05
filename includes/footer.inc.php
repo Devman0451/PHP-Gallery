@@ -11,9 +11,9 @@
                 <div class="connect">
                     <h5>Connect with us</h5>
                     <ul class="list--contact">
-                        <li><a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-square"></i></a></li>
-                        <li><a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter-square"></i></a></li>
-                        <li><a href="#" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-facebook-square"></i></a></li>
+                        <li><a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter-square"></i></a></li>
+                        <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer"><i class="fab fa-instagram"></i></a></li>
                     </ul>
                 </div>
                 <div class="appstore">

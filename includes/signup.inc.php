@@ -13,7 +13,7 @@ if (isset($_POST['submit'])) {
     $pwd2 = $_POST['pwd2'];
 
     //Error check for user input
-    if (empty($first) || empty($last) || empty($uid) || empty($email) || empty($pwd)) {
+    if (empty($first) || empty($last) || empty($uid) || empty($email) || empty($pwd) || empty($pwd2)) {
         header("Location: ../signup.php?error=emptyfield&first=$first&last=$last&uid=$uid&email=$email");
         exit();
     } else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
@@ -64,7 +64,7 @@ if (isset($_POST['submit'])) {
 
                     mysqli_stmt_bind_param($stmt, "sssss", $first, $last, $uid, $email, $hashedPwd);
                     mysqli_stmt_execute($stmt);
-                    header("Location: ../signup.php?signup=success");
+                    header("Location: ../index.php?signup=success");
                     exit();
                 }
             }

@@ -26,8 +26,14 @@
     </nav>
 
     <ul class="list--header signin--list">
-        <li><a href="signup.php" class="link--header">Sign up</a></li>
-        <li><a href="signin.php" class="link--header">Sign in</a></li>
+        <?php
+            if (!isset($_SESSION['uid'])) {
+                echo '<li><a href="signup.php" class="link--header">Sign up</a></li>
+                    <li><a href="signin.php" class="link--header">Sign in</a></li>';
+            } else {
+                echo '<li><a href="includes/logout.inc.php" class="link--header">Logout</a></li>';
+            }
+        ?>
     </ul>
 </header>
 
@@ -45,7 +51,13 @@
         </ul>
     </nav>
     <ul class="mobile--signin list--header signin--list">
-        <li><a href="signup.php" class="link--header">Sign up</a></li>
-        <li><a href="signin.php" class="link--header">Sign in</a></li>
+        <?php
+            if (!isset($_SESSION['uid'])) {
+                echo '<li><a href="signup.php" class="link--header">Sign up</a></li>
+                    <li><a href="signin.php" class="link--header">Sign in</a></li>';
+            } else {
+                echo '<li><a href="includes/logout.inc.php" class="link--header">Logout</a></li>';
+            }
+        ?>
     </ul>
 </section>

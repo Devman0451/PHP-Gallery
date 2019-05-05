@@ -4,6 +4,23 @@ include_once "navbar.php";
 ?>
 
 <main>
+    <?php
+        if (isset($_GET['signin'])) {
+            $msg = $_GET['signin'];
+
+            if ($msg = 'success') {
+                echo '<div class="successmsg">You have successfully signed in.</div>';
+            }
+        }
+
+        if (isset($_GET['logout'])) {
+            $msg = $_GET['logout'];
+
+            if ($msg = 'success') {
+                echo '<div class="successmsg">Successfully logged out.</div>';
+            }
+        }
+    ?>
     <section class="imagelinks--container">
         <ul class="imagelinks--list">
             <li><a href="#" rel="">Lastest</a></li>
