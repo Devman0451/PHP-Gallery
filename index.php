@@ -1,6 +1,6 @@
 <?php
-    include_once "includes/header.inc.php";
-    include_once "navbar.php";
+include_once "includes/header.inc.php";
+include_once "navbar.php";
 ?>
 
 <main>
@@ -13,163 +13,234 @@
 
     <section class="gallery">
 
-        <div class="project">
-            <div class="overlay">
-                <div class="info">
-                    <img src="" alt="" class="avatar">
-                    <div class="title">Title</div>
-                    <div class="author">Author</div>
+        <a href="" class="image-link">
+            <div class="project">
+                <div class="overlay">
+                    <div class="info">
+                        <img src="uploads/icon2.jpg" alt="profile" class="avatar">
+                        <div class="image-info">
+                            <div class="title">Title</div>
+                            <div class="author">Author</div>
+                        </div>
+                    </div>
                 </div>
+                <img src="uploads/img1.jpg" alt="" class="image">
             </div>
-            <img src="uploads/img1.jpg" alt="" class="image">
-        </div>
+        </a>
 
-        <div class="project">
-            <div class="overlay">
-                <div class="info">
-                    <img src="" alt="" class="avatar">
-                    <div class="title">Title</div>
-                    <div class="author">Author</div>
+        <a href="" class="image-link">
+            <div class="project">
+                <div class="overlay">
+                    <div class="info">
+                        <img src="uploads/icon2.jpg" alt="profile" class="avatar">
+                        <div class="image-info">
+                            <div class="title">Title</div>
+                            <div class="author">Author</div>
+                        </div>
+                    </div>
                 </div>
+                <img src="uploads/img1.jpg" alt="" class="image">
             </div>
-            <img src="uploads/img1.jpg" alt="" class="image">
-        </div>
+        </a>
 
-        <div class="project">
-            <div class="overlay">
-                <div class="info">
-                    <img src="" alt="" class="avatar">
-                    <div class="title">Title</div>
-                    <div class="author">Author</div>
+        <a href="" class="image-link">
+            <div class="project">
+                <div class="overlay">
+                    <div class="info">
+                        <img src="uploads/icon2.jpg" alt="profile" class="avatar">
+                        <div class="image-info">
+                            <div class="title">Title</div>
+                            <div class="author">Author</div>
+                        </div>
+                    </div>
                 </div>
+                <img src="uploads/img1.jpg" alt="" class="image">
             </div>
-            <img src="uploads/img1.jpg" alt="" class="image">
-        </div>
+        </a>
 
-        <div class="project">
-            <div class="overlay">
-                <div class="info">
-                    <img src="" alt="" class="avatar">
-                    <div class="title">Title</div>
-                    <div class="author">Author</div>
+        <a href="" class="image-link">
+            <div class="project">
+                <div class="overlay">
+                    <div class="info">
+                        <img src="uploads/icon2.jpg" alt="profile" class="avatar">
+                        <div class="image-info">
+                            <div class="title">Title</div>
+                            <div class="author">Author</div>
+                        </div>
+                    </div>
                 </div>
+                <img src="uploads/img1.jpg" alt="" class="image">
             </div>
-            <img src="uploads/img1.jpg" alt="" class="image">
-        </div>
+        </a>
 
-        <div class="project">
-            <div class="overlay">
-                <div class="info">
-                    <img src="" alt="" class="avatar">
-                    <div class="title">Title</div>
-                    <div class="author">Author</div>
+        <a href="" class="image-link">
+            <div class="project">
+                <div class="overlay">
+                    <div class="info">
+                        <img src="uploads/icon2.jpg" alt="profile" class="avatar">
+                        <div class="image-info">
+                            <div class="title">Title</div>
+                            <div class="author">Author</div>
+                        </div>
+                    </div>
                 </div>
+                <img src="uploads/img1.jpg" alt="" class="image">
             </div>
-            <img src="uploads/img1.jpg" alt="" class="image">
-        </div>
+        </a>
 
-        <div class="project">
-            <div class="overlay">
-                <div class="info">
-                    <img src="" alt="" class="avatar">
-                    <div class="title">Title</div>
-                    <div class="author">Author</div>
+        <a href="" class="image-link">
+            <div class="project">
+                <div class="overlay">
+                    <div class="info">
+                        <img src="uploads/icon2.jpg" alt="profile" class="avatar">
+                        <div class="image-info">
+                            <div class="title">Title</div>
+                            <div class="author">Author</div>
+                        </div>
+                    </div>
                 </div>
+                <img src="uploads/img1.jpg" alt="" class="image">
             </div>
-            <img src="uploads/img1.jpg" alt="" class="image">
-        </div>
+        </a>
 
-        <div class="project">
-            <div class="overlay">
-                <div class="info">
-                    <img src="" alt="" class="avatar">
-                    <div class="title">Title</div>
-                    <div class="author">Author</div>
+        <a href="" class="image-link">
+            <div class="project">
+                <div class="overlay">
+                    <div class="info">
+                        <img src="uploads/icon2.jpg" alt="profile" class="avatar">
+                        <div class="image-info">
+                            <div class="title">Title</div>
+                            <div class="author">Author</div>
+                        </div>
+                    </div>
                 </div>
+                <img src="uploads/img1.jpg" alt="" class="image">
             </div>
-            <img src="uploads/img1.jpg" alt="" class="image">
-        </div>
+        </a>
 
-        <div class="project">
-            <div class="overlay">
-                <div class="info">
-                    <img src="" alt="" class="avatar">
-                    <div class="title">Title</div>
-                    <div class="author">Author</div>
+        <a href="" class="image-link">
+            <div class="project">
+                <div class="overlay">
+                    <div class="info">
+                        <img src="uploads/icon2.jpg" alt="profile" class="avatar">
+                        <div class="image-info">
+                            <div class="title">Title</div>
+                            <div class="author">Author</div>
+                        </div>
+                    </div>
                 </div>
+                <img src="uploads/img1.jpg" alt="" class="image">
             </div>
-            <img src="uploads/img1.jpg" alt="" class="image">
-        </div>
+        </a>
 
-        <div class="project">
-            <div class="overlay">
-                <div class="info">
-                    <img src="" alt="" class="avatar">
-                    <div class="title">Title</div>
-                    <div class="author">Author</div>
+        <a href="" class="image-link">
+            <div class="project">
+                <div class="overlay">
+                    <div class="info">
+                        <img src="uploads/icon2.jpg" alt="profile" class="avatar">
+                        <div class="image-info">
+                            <div class="title">Title</div>
+                            <div class="author">Author</div>
+                        </div>
+                    </div>
                 </div>
+                <img src="uploads/img1.jpg" alt="" class="image">
             </div>
-            <img src="uploads/img1.jpg" alt="" class="image">
-        </div>
+        </a>
 
-        <div class="project">
-            <div class="overlay">
-                <div class="info">
-                    <img src="" alt="" class="avatar">
-                    <div class="title">Title</div>
-                    <div class="author">Author</div>
+        <a href="" class="image-link">
+            <div class="project">
+                <div class="overlay">
+                    <div class="info">
+                        <img src="uploads/icon2.jpg" alt="profile" class="avatar">
+                        <div class="image-info">
+                            <div class="title">Title</div>
+                            <div class="author">Author</div>
+                        </div>
+                    </div>
                 </div>
+                <img src="uploads/img1.jpg" alt="" class="image">
             </div>
-            <img src="uploads/img1.jpg" alt="" class="image">
-        </div>
+        </a>
 
-        <div class="project">
-            <div class="overlay">
-                <div class="info">
-                    <img src="" alt="" class="avatar">
-                    <div class="title">Title</div>
-                    <div class="author">Author</div>
+        <a href="" class="image-link">
+            <div class="project">
+                <div class="overlay">
+                    <div class="info">
+                        <img src="uploads/icon2.jpg" alt="profile" class="avatar">
+                        <div class="image-info">
+                            <div class="title">Title</div>
+                            <div class="author">Author</div>
+                        </div>
+                    </div>
                 </div>
+                <img src="uploads/img1.jpg" alt="" class="image">
             </div>
-            <img src="uploads/img1.jpg" alt="" class="image">
-        </div>
+        </a>
 
-        <div class="project">
-            <div class="overlay">
-                <div class="info">
-                    <img src="" alt="" class="avatar">
-                    <div class="title">Title</div>
-                    <div class="author">Author</div>
+        <a href="" class="image-link">
+            <div class="project">
+                <div class="overlay">
+                    <div class="info">
+                        <img src="uploads/icon2.jpg" alt="profile" class="avatar">
+                        <div class="image-info">
+                            <div class="title">Title</div>
+                            <div class="author">Author</div>
+                        </div>
+                    </div>
                 </div>
+                <img src="uploads/img1.jpg" alt="" class="image">
             </div>
-            <img src="uploads/img1.jpg" alt="" class="image">
-        </div>
+        </a>
 
-        <div class="project">
-            <div class="overlay">
-                <div class="info">
-                    <img src="" alt="" class="avatar">
-                    <div class="title">Title</div>
-                    <div class="author">Author</div>
+        <a href="" class="image-link">
+            <div class="project">
+                <div class="overlay">
+                    <div class="info">
+                        <img src="uploads/icon2.jpg" alt="profile" class="avatar">
+                        <div class="image-info">
+                            <div class="title">Title</div>
+                            <div class="author">Author</div>
+                        </div>
+                    </div>
                 </div>
+                <img src="uploads/img1.jpg" alt="" class="image">
             </div>
-            <img src="uploads/img1.jpg" alt="" class="image">
-        </div>
+        </a>
 
-        <div class="project">
-            <div class="overlay">
-                <div class="info">
-                    <img src="" alt="" class="avatar">
-                    <div class="title">Title</div>
-                    <div class="author">Author</div>
+        <a href="" class="image-link">
+            <div class="project">
+                <div class="overlay">
+                    <div class="info">
+                        <img src="uploads/icon2.jpg" alt="profile" class="avatar">
+                        <div class="image-info">
+                            <div class="title">Title</div>
+                            <div class="author">Author</div>
+                        </div>
+                    </div>
                 </div>
+                <img src="uploads/img1.jpg" alt="" class="image">
             </div>
-            <img src="uploads/img1.jpg" alt="" class="image">
-        </div>
-        
+        </a>
+
+        <a href="" class="image-link">
+            <div class="project">
+                <div class="overlay">
+                    <div class="info">
+                        <img src="uploads/icon2.jpg" alt="profile" class="avatar">
+                        <div class="image-info">
+                            <div class="title">Title</div>
+                            <div class="author">Author</div>
+                        </div>
+                    </div>
+                </div>
+                <img src="uploads/img1.jpg" alt="" class="image">
+            </div>
+        </a>
+
     </section>
 </main>
 
 <?php
-    include_once "includes/footer.inc.php";
+include_once "includes/footer.inc.php";
 ?>
