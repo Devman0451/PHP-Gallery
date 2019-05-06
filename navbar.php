@@ -31,7 +31,8 @@
                 echo '<li><a href="signup.php" class="link--header">Sign up</a></li>
                     <li><a href="signin.php" class="link--header">Sign in</a></li>';
             } else {
-                echo '<li><a href="includes/logout.inc.php" class="link--header">Logout</a></li>';
+                echo '<li><a href="upload.php" class="link--header">Upload</a></li>
+                <li><a href="includes/logout.inc.php" class="link--header">Logout</a></li>';
             }
         ?>
     </ul>
@@ -56,7 +57,8 @@
                 echo '<li><a href="signup.php" class="link--header">Sign up</a></li>
                     <li><a href="signin.php" class="link--header">Sign in</a></li>';
             } else {
-                echo '<li><a href="includes/logout.inc.php" class="link--header">Logout</a></li>';
+                echo '<li><a href="upload.php" class="link--header">Upload</a></li>
+                <li><a href="includes/logout.inc.php" class="link--header">Logout</a></li>';
             }
         ?>
     </ul>

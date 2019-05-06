@@ -3,6 +3,11 @@
 //Validate form submission, prevent user from navigating to script url without the form submission
 if (isset($_POST['submit'])) {
     $image = $_FILES['image'];
+    $title = $_POST['title'];
+    $keys = $_POST['keywords'];
+    $desc = $_POST['description'];
+
+    if(empty($title)) $title = "Untitled";
     
     $imgName = $image['name'];
     $imgTmpName = $image['tmp_name'];

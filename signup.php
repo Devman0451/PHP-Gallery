@@ -33,13 +33,13 @@ include_once "navbar.php";
             <label for="last">* Last name</label>
             <input type="text" name="last" placeholder="E.g. Doe"  value="<?php if (isset($_GET['last'])) echo $_GET['last'];?>">
             <label for="uid">* Username</label>
-            <input type="text" name="uid" placeholder="E.g. johndoe99"  value="<?php if (isset($_GET['uid'])) echo $_GET['uid'];?>">
+            <input type="text" name="uid" placeholder="E.g. johndoe99"  autocomplete="username" value="<?php if (isset($_GET['uid'])) echo $_GET['uid'];?>">
             <label for="email">* Email name</label>
-            <input type="email" name="email" placeholder="E.g. johndoe@gmail.com"  value="<?php if (isset($_GET['email'])) echo $_GET['email'];?>">
+            <input type="email" name="email" placeholder="E.g. johndoe@gmail.com" autocomplete="email" value="<?php if (isset($_GET['email'])) echo $_GET['email'];?>">
             <label for="pwd">* Password</label>
-            <input type="password" name="pwd">
+            <input type="password" name="pwd" autocomplete="current-password">
             <label for="pwd">* Re-type Password</label>
-            <input type="password" name="pwd2">
+            <input type="password" name="pwd2" autocomplete="new-password">
             <input type="submit" name="submit" value="Sign Up" class="signup-btn">
         </form>
     </div>

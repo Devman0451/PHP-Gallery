@@ -6,6 +6,21 @@ include_once "navbar.php";
 <section class="signup tos">
     <div class="signup--container">
         <h2>Upload Image</h2>
+
+        <?php
+            if(isset($_GET['error'])) {
+                $error = $_GET['error'];
+
+                if($error == "imgerror") {
+                    echo '<p class="errormsg">There was a problem with the image file.</p>';
+                } else if($error == "invalidfile") {
+                    echo '<p class="errormsg">Invalid file type.</p>';
+                } else if($error == "imgsize") {
+                    echo '<p class="errormsg">File size too big.</p>';
+                }
+            }
+        ?>
+
         <form action="includes/upload.inc.php" method="post" enctype="multipart/form-data" class="signup-form upload-form">
             <label for="title">Title</label>
             <input type="text" name="title">
