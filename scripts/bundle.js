@@ -1,8 +1,12 @@
 (() => {
+
+    // Navigation Menu for mobile
+    // =================================================================================
+
     const menuBarButton = document.querySelector('.hamburger-header');
     const mobileNavMenu = document.querySelector('.mobile--navmenu');
 
-    window.onresize = throttle(function() {
+    window.onresize = throttle(function () {
         checkWindowSize();
     }, 100);
 
@@ -26,20 +30,20 @@
     menuBarButton.addEventListener('click', toggleMenu);
 
     //Limits calls to checkWindowResize
-    function throttle (func, limit) {
+    function throttle(func, limit) {
         let lastFunc;
         let lastRan;
-        
-        return function() {
+
+        return function () {
             const context = this;
             const args = arguments;
-            if(!lastRan) {
+            if (!lastRan) {
                 func.apply(context, args);
                 lastRan = Date.now();
             } else {
                 clearTimeout(lastFunc);
-                lastFunc = setTimeout(function() {
-                    if((Date.now() - lastRan) >= limit ) {
+                lastFunc = setTimeout(function () {
+                    if ((Date.now() - lastRan) >= limit) {
                         func.apply(context, args);
                         lastRan = Date.now();
                     }
@@ -47,5 +51,17 @@
             }
         }
     }
+
+    // Display filename for uploaded images in upload.php
+    // =================================================================================
+
+    const fileUploadInput = document.querySelector('#image');
+    const fileName = document.querySelector('.filename');
+
+    function addFileTitle(e) {
+        fileName.innerText = this.files[0].name;
+    }
+
+    fileUploadInput.addEventListener('change', addFileTitle);
 
 })();
