@@ -2,6 +2,9 @@
 
 //Validate form submission, prevent user from navigating to script url without the form submission
 if (isset($_POST['submit'])) {
+
+    include_once "../functions/helpers.php";
+
     $image = $_FILES['image'];
     $title = $_POST['title'];
     $keys = $_POST['keywords'];
@@ -29,6 +32,11 @@ if (isset($_POST['submit'])) {
                 $imgUploadName = uniqid('', true) . ".$extension";
                 $dest = "../uploads/$imgUploadName";
                 move_uploaded_file($imgTmpName, $dest);
+
+                //Generate thumbnail
+                $thumbDest = "../uploads/thumbs/thumb_$imgUploadName";
+                create_thumbnail($dest, $extension, $thumbDest, 250, 250);
+
                 header("Location: ../upload.php?upload=success");
                 exit(); 
             } else {
