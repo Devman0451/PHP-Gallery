@@ -14,8 +14,8 @@
 
     <nav class="navbar">
         <ul class="list--header navbar--list">
-            <li><a href="#" class="link--header">About</a></li>
-            <li><a href="#" class="link--header">Users</a></li>
+            <li><a href="about.php" class="link--header">About</a></li>
+            <li><a href="users.php" class="link--header">Users</a></li>
             <li><a href="index.php" class="link--header">Submissions</a></li>
             <li><a href="faq.php" class="link--header">FAQ</a></li>
             <form class="searchform" action="" method="get">
@@ -45,8 +45,8 @@
     </form>
     <nav class="mobile--navbar">
         <ul class="list--header list--navbar">
-            <li><a href="#" class="link--header">About</a></li>
-            <li><a href="#" class="link--header">Users</a></li>
+            <li><a href="about.php" class="link--header">About</a></li>
+            <li><a href="users.php" class="link--header">Users</a></li>
             <li><a href="index.php" class="link--header">Submissions</a></li>
             <li><a href="faq.php" class="link--header">FAQ</a></li>
         </ul>

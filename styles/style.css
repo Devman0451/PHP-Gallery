@@ -827,6 +827,50 @@ input[type="file"] {
 }
 
 /**
+  About Styling
+*/
+
+.about {
+  background-color: var(--dark-gray);
+  color: var(--light-gray);
+  line-height: 1.5;
+}
+
+.about--landing {
+  text-align: center;
+  padding: 100px 0;
+  font-size: 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("../images/about_landing.jpg");
+}
+
+.about--header {
+  font-size: 50px;
+  color: white;
+  line-height: 1;
+}
+
+.about--landing-paragraph {
+  width: 600px;
+  margin: 0 auto;
+}
+
+.about-split {
+  display: flex;
+}
+
+.about--left-col, .about--right-col {
+  width: 50%;
+  padding: 40px;
+}
+
+.about--split-paragraph {
+  width: 80%;
+}
+
+/**
   Contact Styling
 */
 
