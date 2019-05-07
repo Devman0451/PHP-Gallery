@@ -1,4 +1,9 @@
 <?php
+if (!isset($_SESSION['uid'])) {
+    header("Location: index.php");
+    exit();
+}
+
 include_once "includes/header.inc.php";
 include_once "navbar.php";
 ?>
