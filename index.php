@@ -45,7 +45,7 @@ include_once "navbar.php";
             mysqli_stmt_bind_result($stmt, $title, $uploader, $image_url, $image_thumb);
 
             while (mysqli_stmt_fetch($stmt)) {
-                echo '<a href="" class="image-link">
+                echo '<a href="post.php" class="image-link">
                         <div class="project">
                             <div class="overlay">
                                 <div class="info">

@@ -13,8 +13,8 @@ include_once "navbar.php";
                 <th>Date Joined</th>
             </tr>
             <tr>
-                <td><a href="#"><img src="uploads/icon2.jpg" alt="avatar"></a></td>
-                <td><a href="#">User9883</a></td>
+                <td><a href="profile.php"><img src="uploads/icon2.jpg" alt="avatar"></a></td>
+                <td><a href="profile.php">User9883</a></td>
                 <td>12-9-2012</td>
             </tr>
         </table>
