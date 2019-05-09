@@ -879,6 +879,26 @@ input[type="file"] {
 }
 
 /**
+  Profile Styling
+*/
+
+.profile-banner {
+  padding: 60px;
+  max-height: 270px;
+  text-align: center;
+  position: relative;
+  color: white;
+}
+
+.profile-info {
+  text-shadow: 2px 2px 2px black;
+}
+
+.profile-icon {
+  border-radius: 50%;
+}
+
+/**
   Post Styling
 */
 
