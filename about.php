@@ -17,7 +17,7 @@ include_once "navbar.php";
         </div>
 
         <div class="about--right-col">
-            <p>TEST</p>
+            <img src="images/tablet.png" alt="tablet" class="about--img">
         </div>
     </div>
 </section>

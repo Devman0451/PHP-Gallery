@@ -1,7 +1,18 @@
 <?php
 
+//profile table / id, name, location, description, profile_img, created_at 
+
+// CREATE TABLE profile (
+// 	   id int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
+//     name TINYTEXT NOT NULL,
+//     location TINYTEXT NOT NULL,
+//     description LONGTEXT NOT NULL,
+//     profile_img LONGTEXT NOT NULL,
+//     created_at TIMESTAMP NULL default CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP
+// );
+
 //Validate form submission, prevent user from navigating to script url without the form submission
-if (isset($_POST['submit'])) {
+if (isset($_POST['submit']) && $_POST['key'] === 'L3FDTnVz41nVcTz9gULfIktvyq3lNORD') {
 
     require '../config/db.php';
 

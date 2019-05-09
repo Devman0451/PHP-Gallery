@@ -1,7 +1,7 @@
 <?php
 
 //Validate form submission, prevent user from navigating to script url without the form submission
-if (isset($_POST['submit'])) {
+if (isset($_POST['submit']) && $_POST['key'] === 'o0DEjArU99z1StkWgd6KY81Tq5EnZljk') {
 
     require_once '../config/db.php';
 

@@ -20,6 +20,7 @@ include_once "navbar.php";
         ?>
 
         <form action="includes/signin.inc.php" method="post" class="signup-form">
+            <input type="hidden" name="key" value="o0DEjArU99z1StkWgd6KY81Tq5EnZljk">
             <label for="email">Username or email</label>
             <input type="text" name="uid" placeholder="E.g. johndoe9 or johndoe@gmail.com" autocomplete="username">
             <label for="pwd">Password</label>

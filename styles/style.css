@@ -866,8 +866,39 @@ input[type="file"] {
   padding: 40px;
 }
 
+.about--right-col {
+  height: 500px;
+}
+
 .about--split-paragraph {
   width: 80%;
+}
+
+.about--img {
+  height: 100%;
+}
+
+/**
+  Users Styling
+*/
+
+.users {
+  text-align: center;
+}
+
+.users-container {
+  margin: 10px;
+}
+
+.users-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+td, th {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
 }
 
 /**

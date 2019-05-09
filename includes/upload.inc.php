@@ -18,7 +18,7 @@
 
 session_start();
 
-if (isset($_POST['submit']) && isset($_SESSION['uid'])) {
+if (isset($_POST['submit']) && isset($_SESSION['uid']) && $_POST['key'] === '2NDvBgJ4pP2R9NzGWAbhiPYzx1UwQhtO') {
 
     include_once '../functions/helpers.php';
     require '../config/db.php';

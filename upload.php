@@ -1,10 +1,11 @@
 <?php
+include_once "includes/header.inc.php";
+
 if (!isset($_SESSION['uid'])) {
     header("Location: index.php");
     exit();
 }
 
-include_once "includes/header.inc.php";
 include_once "navbar.php";
 ?>
 
@@ -27,6 +28,7 @@ include_once "navbar.php";
         ?>
 
         <form action="includes/upload.inc.php" method="post" enctype="multipart/form-data" class="signup-form upload-form">
+            <input type="hidden" name="key" value="2NDvBgJ4pP2R9NzGWAbhiPYzx1UwQhtO">
             <label for="title">Title</label>
             <input type="text" name="title">
             <label for="keywords">Keywords <span class="keyword--span">*separate with commas*</span></label>

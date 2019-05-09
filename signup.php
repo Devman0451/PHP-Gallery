@@ -28,6 +28,7 @@ include_once "navbar.php";
         ?>
 
         <form action="includes/signup.inc.php" method="post" class="signup-form">
+            <input type="hidden" name="key" value="L3FDTnVz41nVcTz9gULfIktvyq3lNORD">
             <label for="first">* First name</label>
             <input type="text" name="first" placeholder="E.g. John" value="<?php if (isset($_GET['first'])) echo $_GET['first'];?>">
             <label for="last">* Last name</label>
