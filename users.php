@@ -20,13 +20,13 @@ include_once "navbar.php";
 
                 if (mysqli_stmt_prepare($stmt, $sql)) {
                     mysqli_stmt_execute($stmt);
-                    mysqli_stmt_bind_result($stmt, $profile_name, $profile_img, $created_at);
+                    mysqli_stmt_bind_result($stmt, $profileName, $profileImg, $createdAt);
 
                     while (mysqli_stmt_fetch($stmt)) {
                         echo '<tr>
-                                <td><a href="profile.php?user=' . $profile_name . '"><img src="' . $profile_img . '" alt="avatar"></a></td>
-                                <td><a href="profile.php?user=' . $profile_name . '">' . $profile_name . '</a></td>
-                                <td>' . $created_at . '</td>
+                                <td><a href="profile.php?user=' . $profileName . '"><img src="' . $profileImg . '" alt="avatar"></a></td>
+                                <td><a href="profile.php?user=' . $profileName . '">' . $profileName . '</a></td>
+                                <td>' . date("m/d/y h:i:s A", strtotime($createdAt)) . '</td>
                             </tr>';
                     }
                 }
