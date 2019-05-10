@@ -1,20 +1,9 @@
 <?php
 
-//profile table / id, name, location, description, profile_img, created_at 
-
-// CREATE TABLE profile (
-// 	   id int(11) NOT NULL PRIMARY KEY AUTO_INCREMENT,
-//     name TINYTEXT NOT NULL,
-//     location TINYTEXT NOT NULL,
-//     description LONGTEXT NOT NULL,
-//     profile_img LONGTEXT NOT NULL,
-//     created_at TIMESTAMP NULL default CURRENT_TIMESTAMP on update CURRENT_TIMESTAMP
-// );
-
 //Validate form submission, prevent user from navigating to script url without the form submission
 if (isset($_POST['submit']) && $_POST['key'] === 'L3FDTnVz41nVcTz9gULfIktvyq3lNORD') {
 
-    require '../config/db.php';
+    require_once '../config/db.php';
 
     $first = $_POST['first'];
     $last = $_POST['last'];
@@ -63,7 +52,7 @@ if (isset($_POST['submit']) && $_POST['key'] === 'L3FDTnVz41nVcTz9gULfIktvyq3lNO
                 exit();
             } else {
 
-                //If the input passes all the checks, insert into the database table "users"
+                // If the input passes all the checks, insert into the database table "users"
                 $sql = "INSERT INTO users (user_first, user_last, user_uid, user_email, user_pwd) VALUES (?, ?, ?, ?, ?);";
                 $stmt = mysqli_stmt_init($conn);
 
@@ -75,7 +64,9 @@ if (isset($_POST['submit']) && $_POST['key'] === 'L3FDTnVz41nVcTz9gULfIktvyq3lNO
 
                     mysqli_stmt_bind_param($stmt, "sssss", $first, $last, $uid, $email, $hashedPwd);
                     mysqli_stmt_execute($stmt);
-                    header("Location: ../index.php?signup=success");
+                    session_start();
+                    $_SESSION['username'] = $uid;
+                    header("Location: profile.inc.php");
                     exit();
                 }
             }
@@ -84,7 +75,6 @@ if (isset($_POST['submit']) && $_POST['key'] === 'L3FDTnVz41nVcTz9gULfIktvyq3lNO
 
     mysqli_stmt_close($stmt);
     mysqli_close($conn);
-
 } else {
     header("Location: ../signup.php");
     exit();

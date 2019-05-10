@@ -48,6 +48,9 @@ if (isset($_POST['submit']) && $_POST['key'] === 'o0DEjArU99z1StkWgd6KY81Tq5EnZl
                 exit();
             }
         }
+        
+        mysqli_stmt_close($stmt);
+        mysqli_close($conn);
     }
 } else {
     header("Location: ../signin.php");
