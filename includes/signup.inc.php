@@ -34,15 +34,15 @@ if (isset($_POST['submit']) && $_POST['key'] === 'L3FDTnVz41nVcTz9gULfIktvyq3lNO
     } else {
 
         //Checks for an existing username or an existing email
-        $sql = "SELECT user_uid FROM users WHERE user_uid=? OR user_email=?;";
+        $sql = 'SELECT user_uid FROM users WHERE user_uid=? OR user_email=?;';
         $stmt = mysqli_stmt_init($conn);
 
         if (!mysqli_stmt_prepare($stmt, $sql)) {
-            header("Location: ../signup.php?error=sqlerror");
+            header('Location: ../signup.php?error=sqlerror');
             exit();
         } else {
 
-            mysqli_stmt_bind_param($stmt, "ss", $uid, $email);
+            mysqli_stmt_bind_param($stmt, 'ss', $uid, $email);
             mysqli_stmt_execute($stmt);
             mysqli_stmt_store_result($stmt);
             $resultCheck = mysqli_stmt_num_rows($stmt);
@@ -53,20 +53,20 @@ if (isset($_POST['submit']) && $_POST['key'] === 'L3FDTnVz41nVcTz9gULfIktvyq3lNO
             } else {
 
                 // If the input passes all the checks, insert into the database table "users"
-                $sql = "INSERT INTO users (user_first, user_last, user_uid, user_email, user_pwd) VALUES (?, ?, ?, ?, ?);";
+                $sql = 'INSERT INTO users (user_first, user_last, user_uid, user_email, user_pwd) VALUES (?, ?, ?, ?, ?);';
                 $stmt = mysqli_stmt_init($conn);
 
                 if (!mysqli_stmt_prepare($stmt, $sql)) {
-                    header("Location: ../signup.php?error=sqlerror");
+                    header('Location: ../signup.php?error=sqlerror');
                     exit();
                 } else {
                     $hashedPwd = password_hash($pwd, PASSWORD_DEFAULT);
 
-                    mysqli_stmt_bind_param($stmt, "sssss", $first, $last, $uid, $email, $hashedPwd);
+                    mysqli_stmt_bind_param($stmt, 'sssss', $first, $last, $uid, $email, $hashedPwd);
                     mysqli_stmt_execute($stmt);
                     session_start();
                     $_SESSION['username'] = $uid;
-                    header("Location: profile.inc.php");
+                    header('Location: profile.inc.php');
                     exit();
                 }
             }
@@ -76,6 +76,6 @@ if (isset($_POST['submit']) && $_POST['key'] === 'L3FDTnVz41nVcTz9gULfIktvyq3lNO
     mysqli_stmt_close($stmt);
     mysqli_close($conn);
 } else {
-    header("Location: ../signup.php");
+    header('Location: ../signup.php');
     exit();
 }

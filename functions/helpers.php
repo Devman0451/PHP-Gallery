@@ -50,3 +50,11 @@ function create_thumbnail($src, $extension, $dest, $w, $h) {
     imagedestroy($trueColor);
     return true;
 }
+
+//Debug function 
+function dnd($var) {
+    echo "<pre>";
+    var_dump($var);
+    echo "</pre>";
+    die();
+}

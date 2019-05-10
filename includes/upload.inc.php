@@ -31,7 +31,7 @@ if (isset($_POST['submit']) && isset($_SESSION['uid']) && $_POST['key'] === '2ND
     $uploader = $_SESSION['uid'];
     $uploaderId = $_SESSION['id'];
 
-    if(empty($title)) $title = "Untitled";
+    if(empty($title)) $title = 'Untitled';
     
     $imgName = $image['name'];
     $imgTmpName = $image['tmp_name'];
@@ -59,36 +59,36 @@ if (isset($_POST['submit']) && isset($_SESSION['uid']) && $_POST['key'] === '2ND
                 create_thumbnail("../$dest", $extension, "../$thumbDest", 250, 250);
 
                 //upload image info to the database table "images"
-                $sql = "INSERT INTO images (title, uploader, uploader_id, description, image_url, image_thumb, tags) VALUES (?, ?, ?, ?, ?, ?, ?);";
+                $sql = 'INSERT INTO images (title, uploader, uploader_id, description, image_url, image_thumb, tags) VALUES (?, ?, ?, ?, ?, ?, ?);';
                 $stmt = mysqli_stmt_init($conn);
 
                 if (!mysqli_stmt_prepare($stmt, $sql)) {
-                    header("Location: ../upload.php?error=sqlerror");
+                    header('Location: ../upload.php?error=sqlerror');
                     exit();
                 } else {
-                    mysqli_stmt_bind_param($stmt, "ssissss", $title, $uploader, $uploaderId, $desc, $dest, $thumbDest, $keys);
+                    mysqli_stmt_bind_param($stmt, 'ssissss', $title, $uploader, $uploaderId, $desc, $dest, $thumbDest, $keys);
                     mysqli_stmt_execute($stmt);
                     //CHANGE URL TO IMAGE UPLOAD ONCE IT'S COMPLETE
-                    header("Location: ../upload.php?upload=success");
+                    header('Location: ../upload.php?upload=success');
                     exit(); 
                 }
 
                 mysqli_stmt_close($stmt);
                 mysqli_close($conn);
             } else {
-                header("Location: ../upload.php?error=imgsize");
+                header('Location: ../upload.php?error=imgsize');
                 exit(); 
             }
         } else {
-            header("Location: ../upload.php?error=imgerror");
+            header('Location: ../upload.php?error=imgerror');
             exit();
         }
     } else {
-        header("Location: ../upload.php?error=invalidfile");
+        header('Location: ../upload.php?error=invalidfile');
         exit();
     }
 
 } else {
-    header("Location: ../index/php");
+    header('Location: ../index/php');
     exit();
 }

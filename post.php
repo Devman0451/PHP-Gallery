@@ -56,10 +56,15 @@ if (isset($_GET['img'])) {
                 </li>
             </ul>
         </div>
-        <form action="includes/comment.inc.php" method="post" class="comment-form">
-            <textarea name="comment" cols="30" rows="10" class="comment"></textarea>
-            <input type="submit" value="Submit" class="btn-subscribe">
-        </form>
+        <?php
+            if (isset($_SESSION['uid'])) {
+                echo '<form action="includes/comment.inc.php" method="post" class="comment-form">
+                        <input type="hidden" name="img_id" value="' . $id . '">
+                        <textarea name="comment" cols="30" rows="10" class="comment"></textarea>
+                        <input type="submit" name="submit" value="Submit" class="btn-subscribe">
+                    </form>';
+            }
+        ?>
     </div>
 </section>
 
