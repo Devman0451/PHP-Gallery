@@ -37,15 +37,15 @@ include_once "navbar.php";
         //Load Images from db
         include_once 'config/db.php';
 
-        $sql = "SELECT title, uploader, image_url, image_thumb FROM images LIMIT 30";
+        $sql = "SELECT id, title, uploader, image_thumb FROM images LIMIT 30";
         $stmt = mysqli_stmt_init($conn);
 
         if (mysqli_stmt_prepare($stmt, $sql)) {
             mysqli_stmt_execute($stmt);
-            mysqli_stmt_bind_result($stmt, $title, $uploader, $image_url, $image_thumb);
+            mysqli_stmt_bind_result($stmt, $id, $title, $uploader, $image_thumb);
 
             while (mysqli_stmt_fetch($stmt)) {
-                echo '<a href="post.php" class="image-link">
+                echo '<a href="post.php?img=' . $id . '" class="image-link">
                         <div class="project">
                             <div class="overlay">
                                 <div class="info">
