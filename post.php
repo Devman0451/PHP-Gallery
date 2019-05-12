@@ -28,7 +28,7 @@ if (isset($_GET['img'])) {
         <h1><?php echo $title; ?> <span>by</span> <?php echo $uploader; ?></h1>
         <h4><?php echo $date; ?></h4>
         <div class="post--image-container">
-            <img src="uploads/5cd43881f3b858.58227474.jpg" alt="upload">
+            <img src="<?php echo $image_url; ?>" alt="upload">
         </div>
         <h4>Description</h4>
         <p class="description"><?php echo $description; ?>.</p>

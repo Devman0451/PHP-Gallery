@@ -37,7 +37,7 @@ include_once "navbar.php";
         //Load Images from db
         include_once 'config/db.php';
 
-        $sql = "SELECT id, title, uploader, image_thumb FROM images LIMIT 30";
+        $sql = "SELECT id, title, uploader, image_thumb FROM images ORDER BY date DESC LIMIT 30;";
         $stmt = mysqli_stmt_init($conn);
 
         if (mysqli_stmt_prepare($stmt, $sql)) {

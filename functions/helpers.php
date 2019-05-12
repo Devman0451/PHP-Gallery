@@ -14,16 +14,17 @@ function create_thumbnail($src, $extension, $dest, $w, $h) {
     list($imgWidth, $imgHeight) = getimagesize($src);
     $ratio = $imgWidth / $imgHeight;
 
+    //Used to create a square thumbnail
+    //diff is overflow on the longest dimension on either side.
+    if ($imgWidth > $imgHeight) {
+        $diff = ($imgWidth - $imgHeight) / 2;
+    }  else {
+        $diff = ($imgHeight - $imgWidth) / 2;
+    }
+
     $allowableExt = ['jpg', 'gif', 'jpeg', 'png'];
 
     if (!in_array($extension, $allowableExt)) return false;
-
-    //adjust target width and height to match image's ratio
-    if ($w / $h > $ratio) {
-        $w = $h * $ratio;
-    } else {
-        $h = $w / $ratio;
-    }
 
     $thumb = null;
     switch($extension) {
@@ -45,7 +46,14 @@ function create_thumbnail($src, $extension, $dest, $w, $h) {
 
     //resize thumb and save to file
     $trueColor = imagecreatetruecolor($w, $h);
-    imagecopyresampled($trueColor, $thumb, 0, 0, 0, 0, $w, $h, $imgWidth, $imgHeight);
+    if ($imgWidth > $imgHeight) {
+        imagecopyresampled($trueColor, $thumb, 0, 0, $diff, 0, $w, $h, $imgWidth - (2 * $diff), $imgHeight);
+    } else if ($imgHeight > $imgWidth) {
+        imagecopyresampled($trueColor, $thumb, 0, 0, 0, $diff, $w, $h, $imgWidth, $imgHeight - (2 * $diff));
+    } else {
+        imagecopyresampled($trueColor, $thumb, 0, 0, 0, 0, $w, $h, $imgWidth, $imgHeight);
+    }
+
     imagejpeg($trueColor, $dest, 100);
     imagedestroy($trueColor);
     return true;
