@@ -810,6 +810,7 @@ input[type="file"] {
 }
 
 .upload--fileupload {
+  text-align: center;
   border: 1px solid var(--dark-gray);
   display: inline-block;
   padding: 6px 12px;
