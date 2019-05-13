@@ -58,7 +58,7 @@ if (isset($_SESSION['username'])) {
                     //Insert new profile into table if the user exists and a profile doesn't exist
                     $location = 'Not Given';
                     $description = 'No Description';
-                    $profile_image = 'uploads/icon2.jpg';
+                    $profile_image = 'uploads/icons/default.jpg';
 
                     $sql = 'INSERT INTO profiles (profile_name, location, description, profile_img) VALUES (?, ?, ?, ?);';
                     $stmt = mysqli_stmt_init($conn);

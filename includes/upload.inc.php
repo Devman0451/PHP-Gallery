@@ -68,8 +68,7 @@ if (isset($_POST['submit']) && isset($_SESSION['uid']) && $_POST['key'] === '2ND
                 } else {
                     mysqli_stmt_bind_param($stmt, 'ssissss', $title, $uploader, $uploaderId, $desc, $dest, $thumbDest, $keys);
                     mysqli_stmt_execute($stmt);
-                    //CHANGE URL TO IMAGE UPLOAD ONCE IT'S COMPLETE
-                    header('Location: ../upload.php?upload=success');
+                    header('Location: ../index.php');
                     exit(); 
                 }
 

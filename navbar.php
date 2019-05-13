@@ -14,9 +14,9 @@
 
     <nav class="navbar">
         <ul class="list--header navbar--list">
+            <li><a href="index.php" class="link--header">Submissions</a></li>
             <li><a href="about.php" class="link--header">About</a></li>
             <li><a href="users.php" class="link--header">Users</a></li>
-            <li><a href="index.php" class="link--header">Submissions</a></li>
             <li><a href="faq.php" class="link--header">FAQ</a></li>
             <form class="searchform" action="" method="get">
                 <input class="searchbar--header" type="text" name="search" placeholder="Search...">
@@ -27,14 +27,20 @@
 
     <ul class="list--header signin--list">
         <?php
-            if (!isset($_SESSION['uid'])) {
-                echo '<li><a href="signup.php" class="link--header">Sign up</a></li>
+        if (!isset($_SESSION['uid'])) {
+            echo '<li><a href="signup.php" class="link--header">Sign up</a></li>
                     <li><a href="signin.php" class="link--header">Sign in</a></li>';
-            } else {
-                echo '<li><a href="edit_profile.php" class="link--header">Edit Profile</a></li>
-                    <li><a href="upload.php" class="link--header">Upload</a></li>
-                    <li><a href="includes/logout.inc.php" class="link--header">Logout</a></li>';
-            }
+        } else {
+            echo '<img src="uploads/icons/default.jpg" alt="profile" class="avatar">       
+                <li class="profile-item">
+                    <a href="profile.php?user=' . $_SESSION['uid'] . '" class="link--header">My Profile</a>
+                    <ul class="dropdown">
+                        <li><a href="edit_profile.php" class="link--header">Edit Profile</a></li>
+                        <li><a href="upload.php" class="link--header">Upload</a></li>
+                        <li><a href="includes/logout.inc.php" class="link--header">Logout</a></li>
+                    </ul>
+                </li>';
+        }
         ?>
     </ul>
 </header>
@@ -54,14 +60,14 @@
     </nav>
     <ul class="mobile--signin list--header signin--list">
         <?php
-            if (!isset($_SESSION['uid'])) {
-                echo '<li><a href="signup.php" class="link--header">Sign up</a></li>
+        if (!isset($_SESSION['uid'])) {
+            echo '<li><a href="signup.php" class="link--header">Sign up</a></li>
                     <li><a href="signin.php" class="link--header">Sign in</a></li>';
-            } else {
-                echo '<li><a href="edit_profile.php" class="link--header">Edit Profile</a></li>
+        } else {
+            echo '<li><a href="edit_profile.php" class="link--header">Edit Profile</a></li>
                     <li><a href="upload.php" class="link--header">Upload</a></li>
                     <li><a href="includes/logout.inc.php" class="link--header">Logout</a></li>';
-            }
+        }
         ?>
     </ul>
 </section>

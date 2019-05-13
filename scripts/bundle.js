@@ -1,4 +1,20 @@
 (() => {
+    // Handle the profile dropdown menu
+    // =================================================================================
+
+    const trigger = document.querySelector('.signin--list');
+    const dropdown = document.querySelector('.dropdown');
+
+    function hoverProfileEnter() {
+        dropdown.style.display = 'block';
+    }
+
+    function hoverProfileLeave() {
+        dropdown.style.display = 'none';
+    }
+
+    trigger.addEventListener('mouseenter', hoverProfileEnter);
+    trigger.addEventListener('mouseleave', hoverProfileLeave);
 
     // Navigation Menu for mobile
     // =================================================================================
@@ -62,6 +78,7 @@
         fileName.innerText = this.files[0].name;
     }
 
-    fileUploadInput.addEventListener('change', addFileTitle);
-
+    if (fileUploadInput != null) {
+        fileUploadInput.addEventListener('change', addFileTitle);
+    }
 })();

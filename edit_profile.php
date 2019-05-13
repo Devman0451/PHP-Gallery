@@ -50,8 +50,6 @@ if (isset($_SESSION['uid']) && isset($_SESSION['id'])) {
         ?>
 
         <form action="includes/edit_profile.inc.php" method="post" class="signup-form">
-            <label for="first">* Profile Name</label>
-            <input type="text" name="profileName" value="<?php echo $profileName; ?>">
             <label for="last">* Location</label>
             <input type="text" name="location"  value="<?php echo $location; ?>">
             <label for="uid">* Description</label>

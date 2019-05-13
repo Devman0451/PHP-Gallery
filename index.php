@@ -49,7 +49,7 @@ include_once "navbar.php";
                         <div class="project">
                             <div class="overlay">
                                 <div class="info">
-                                    <img src="uploads/icon2.jpg" alt="profile" class="avatar">
+                                    <img src="uploads/icons/default.jpg" alt="profile" class="avatar">
                                     <div class="image-info">
                                         <div class="title">' . $title . '</div>
                                         <div class="author">' . $uploader . '</div>
@@ -112,7 +112,7 @@ include_once "navbar.php";
             <div class="project">
                 <div class="overlay">
                     <div class="info">
-                        <img src="uploads/icon2.jpg" alt="profile" class="avatar">
+                        <img src="uploads/icons/default.jpg" alt="profile" class="avatar">
                         <div class="image-info">
                             <div class="title">Title</div>
                             <div class="author">Author</div>

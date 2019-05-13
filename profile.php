@@ -24,12 +24,11 @@ if (isset($_GET['user'])) {
 
 <section class="post">
     <div class="profile-banner" style="
-        background-image: url(uploads/banner.jpg);
-        background-color: rgb(30, 30, 30);
+        background-color: rgb(45, 45, 45);
         background-size: cover;
         background-repeat: no-repeat;
         ">
-        <img src="uploads/icon2.jpg" alt="profile icon" class="profile-icon">
+        <img src="uploads/icons/default.jpg" alt="profile icon" class="profile-icon">
         <div class="profile-info">
             <h1> <?php echo $profileName; ?> </h1>
             <p> <?php echo $description; ?> </p>
