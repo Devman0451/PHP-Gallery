@@ -475,6 +475,7 @@ input[type="file"] {
 .searchbar--header {
     background: var(--dark-gray);
     border: 1px solid gray;
+    color: white;
     padding: 3px;
     border-radius: 3px;
     transition: all 200ms ease-in-out;
@@ -589,6 +590,11 @@ input[type="file"] {
   grid-template-columns: repeat(8, 1fr);
 }
 
+.search-msg {
+  grid-column: 4 /span 2;
+  text-align: center;
+}
+
 .project {
   position: relative;
   width: 100%;
@@ -646,12 +652,20 @@ input[type="file"] {
   .gallery {
     grid-template-columns: repeat(7, 1fr);
   }
+
+  .search-msg {
+    grid-column: 4 /span 1;
+  }
 }
 
 @media screen and (max-width: 1200px) {
   
   .gallery {
     grid-template-columns: repeat(6, 1fr);
+  }
+
+  .search-msg {
+    grid-column: 3 /span 2;
   }
 }
 
@@ -660,12 +674,20 @@ input[type="file"] {
   .gallery {
     grid-template-columns: repeat(5, 1fr);
   }
+
+  .search-msg {
+    grid-column: 3 /span 1;
+  }
 }
 
 @media screen and (max-width: 800px) {
   
   .gallery {
     grid-template-columns: repeat(4, 1fr);
+  }
+
+  .search-msg {
+    grid-column: 2 /span 2;
   }
 }
 
@@ -674,12 +696,20 @@ input[type="file"] {
   .gallery {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  .search-msg {
+    grid-column: 2 /span 1;
+  }
 }
 
 @media screen and (max-width: 400px) {
   
   .gallery {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .search-msg {
+    grid-column: 1 /span 2;
   }
 }
 
