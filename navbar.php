@@ -18,7 +18,7 @@
             <li><a href="about.php" class="link--header">About</a></li>
             <li><a href="users.php" class="link--header">Users</a></li>
             <li><a href="faq.php" class="link--header">FAQ</a></li>
-            <form class="searchform" action="" method="get">
+            <form class="searchform" action="index.php" method="get">
                 <input class="searchbar--header" type="text" name="search" placeholder="Search...">
                 <input class="btn-hidden" type="submit">
             </form>
@@ -31,7 +31,19 @@
             echo '<li><a href="signup.php" class="link--header">Sign up</a></li>
                     <li><a href="signin.php" class="link--header">Sign in</a></li>';
         } else {
-            echo '<img src="uploads/icons/default.jpg" alt="profile" class="avatar">       
+            include_once "config/db.php";
+
+            $sql = 'SELECT profile_name, profile_img, created_at FROM profiles WHERE profile_name=?;';
+            $stmt = mysqli_stmt_init($conn);
+
+            if (mysqli_stmt_prepare($stmt, $sql)) {
+                mysqli_stmt_bind_param($stmt, 's', $_SESSION['uid']);
+                mysqli_stmt_execute($stmt);
+                mysqli_stmt_bind_result($stmt, $profileName, $profileImg, $createdAt);
+                mysqli_stmt_fetch($stmt);
+            }
+
+            echo '<img src="' . $profileImg . '" alt="profile" class="avatar">       
                 <li class="profile-item">
                     <a href="profile.php?user=' . $_SESSION['uid'] . '" class="link--header">My Profile</a>
                     <ul class="dropdown">
@@ -40,6 +52,7 @@
                         <li><a href="includes/logout.inc.php" class="link--header">Logout</a></li>
                     </ul>
                 </li>';
+                
         }
         ?>
     </ul>

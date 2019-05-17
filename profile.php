@@ -32,7 +32,7 @@ include_once "navbar.php";
         background-size: cover;
         background-repeat: no-repeat;
         ">
-        <img src="uploads/icons/default.jpg" alt="profile icon" class="profile-icon">
+        <img src="<?php echo $profileImg; ?>" alt="profile icon" class="profile-icon">
         <div class="profile-info">
             <h1> <?php echo $profileName; ?> </h1>
             <p> <?php echo $description; ?> </p>

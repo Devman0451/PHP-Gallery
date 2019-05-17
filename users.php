@@ -15,7 +15,7 @@ include_once "navbar.php";
             <?php
                 include_once "config/db.php";
 
-                $sql = 'SELECT profile_name, profile_img, created_at FROM profiles LIMIT 20;';
+                $sql = 'SELECT profile_name, profile_img, created_at FROM profiles ORDER BY created_at DESC LIMIT 20;';
                 $stmt = mysqli_stmt_init($conn);
 
                 if (mysqli_stmt_prepare($stmt, $sql)) {
@@ -24,7 +24,7 @@ include_once "navbar.php";
 
                     while (mysqli_stmt_fetch($stmt)) {
                         echo '<tr>
-                                <td><a href="profile.php?user=' . $profileName . '"><img src="' . $profileImg . '" alt="avatar"></a></td>
+                                <td><a href="profile.php?user=' . $profileName . '"><img src="' . $profileImg . '" alt="avatar" class="profile-icon"></a></td>
                                 <td><a href="profile.php?user=' . $profileName . '">' . $profileName . '</a></td>
                                 <td>' . date("m/d/y h:i:s A", strtotime($createdAt)) . '</td>
                             </tr>';

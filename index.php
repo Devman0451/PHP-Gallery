@@ -15,6 +15,15 @@ include_once "navbar.php";
         }
     }
 
+    if (isset($_GET['signup'])) {
+        $msg = $_GET['signup'];
+
+        if ($msg = 'success') {
+            echo '<div class="successmsg">You have successfully created an account.</div>
+                <div class="successmsg"><a href="signin.php" class="successmsg">Sign in here</a><div>';
+        }
+    }
+
     if (isset($_GET['logout'])) {
         $msg = $_GET['logout'];
 

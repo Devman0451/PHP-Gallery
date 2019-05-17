@@ -35,26 +35,20 @@ if (isset($_SESSION['uid']) && isset($_SESSION['id'])) {
 
                 if ($error == "emptyfield") {
                     echo '<p class="errormsg">Please fill out all fields.</p>';
-                } else if ($error == "invalidemail") {
-                    echo '<p class="errormsg">Please enter a valid email address.</p>';
-                } else if ($error == "invaliduid") {
-                    echo '<p class="errormsg">Please enter a valid username.</p>';
-                } else if ($error == "invalidname") {
-                    echo '<p class="errormsg">First and last name can only contain letters.</p>';
-                } else if ($error == "invalidpassword") {
-                    echo '<p class="errormsg">Password must be at least 6 characters.</p>';
-                } else if ($error == "invalidpwdmatch") {
-                    echo '<p class="errormsg">Passwords don\'t match.</p>';
-                }
+                } else if ($error == "imgsize") {
+                    echo '<p class="errormsg">Image size is too large.</p>';
+                } else if ($error == "imgerror") {
+                    echo '<p class="errormsg">Problem with image file.</p>';
+                } 
             }
         ?>
 
-        <form action="includes/edit_profile.inc.php" method="post" class="signup-form">
+        <form action="includes/edit_profile.inc.php" method="post" class="signup-form" enctype="multipart/form-data">
             <label for="last">* Location</label>
             <input type="text" name="location"  value="<?php echo $location; ?>">
             <label for="uid">* Description</label>
             <input type="text" name="description" value="<?php echo $description; ?>">
-            <label for="image">Profile Image</label>
+            <label>Profile Image</label>
             <label for="image" class="upload--fileupload">Select Image</label>
             <input type="file" name="image" id="image">
             <span class="filename">No File Selected</span>

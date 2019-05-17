@@ -1,6 +1,7 @@
 <?php
 include_once '../functions/helpers.php';
 session_start();
+
 //Updates user profile
 if (isset($_POST['submit']) && isset($_SESSION['uid'])) {
 
@@ -28,7 +29,7 @@ if (isset($_POST['submit']) && isset($_SESSION['uid'])) {
 
         if (in_array($extension, $allowableExt)) {
             if ($imgError === 0) {
-                if ($imgSize <= 9000) {
+                if ($imgSize <= 15000) {
 
                     //Generate unique name and store in uploads folder
                     $iconUploadName = $username . '_' . uniqid('', true) . '.' . $extension;

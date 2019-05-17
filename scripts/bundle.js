@@ -5,12 +5,12 @@
     const trigger = document.querySelector('.signin--list');
     const dropdown = document.querySelector('.dropdown');
 
-    function hoverProfileEnter() {
+    function hoverProfileEnter(e) {
         dropdown.style.display = 'block';
     }
 
-    function hoverProfileLeave() {
-        dropdown.style.display = 'none';
+    function hoverProfileLeave(e) {
+        dropdown.style.display = 'none';    
     }
 
     trigger.addEventListener('mouseenter', hoverProfileEnter);
