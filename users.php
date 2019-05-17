@@ -30,6 +30,9 @@ include_once "navbar.php";
                             </tr>';
                     }
                 }
+
+                mysqli_stmt_close($stmt);
+                mysqli_close($conn);
             ?>
         </table>
     </div>

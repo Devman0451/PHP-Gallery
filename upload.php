@@ -31,7 +31,7 @@ include_once "navbar.php";
             <input type="hidden" name="key" value="2NDvBgJ4pP2R9NzGWAbhiPYzx1UwQhtO">
             <label for="title">Title</label>
             <input type="text" name="title">
-            <label for="keywords">Keywords <span class="keyword--span">*separate with commas*</span></label>
+            <label for="keywords">Keywords</label>
             <input type="text" name="keywords">
             <label for="image" class="upload--fileupload">Select Image</label>
             <input type="file" name="image" id="image">

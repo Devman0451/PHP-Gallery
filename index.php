@@ -27,6 +27,7 @@ include_once "navbar.php";
         <ul class="imagelinks--list">
             <li><a href="index.php?load=latest" rel="">Lastest</a></li>
             <li><a href="index.php?load=trending" rel="">Trending</a></li>
+            <li><a href="classic.php" rel="">Classics</a></li>
         </ul>
     </section>
 
@@ -102,7 +103,7 @@ include_once "navbar.php";
                          </a>';
                 }
             }
-        } else if (isset($_GET['load']) && $_GET['load'] == 'latest') {
+        } else {
             
             //Load the latest images
             $sql = "SELECT id, title, uploader, image_thumb FROM images ORDER BY date DESC LIMIT 30;";
@@ -130,6 +131,9 @@ include_once "navbar.php";
                 }
             }
         } 
+
+        mysqli_stmt_close($stmt);
+        mysqli_close($conn);
 
         ?>
 

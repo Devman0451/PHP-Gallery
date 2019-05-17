@@ -1,11 +1,10 @@
 <?php
 include_once "includes/header.inc.php";
-include_once "navbar.php";
-
-require_once 'config/db.php';
 
 //Get profile for user
 if (isset($_GET['user'])) {
+
+    require_once 'config/db.php';
 
     $username = $_GET['user'];
 
@@ -18,7 +17,12 @@ if (isset($_GET['user'])) {
         mysqli_stmt_bind_result($stmt, $profileName, $location, $description, $profileImg, $createdAt);
         mysqli_stmt_fetch($stmt);
     }
+} else {
+    header('Location: index.php');
+    exit();
 }
+
+include_once "navbar.php";
 
 ?>
 
@@ -41,18 +45,19 @@ if (isset($_GET['user'])) {
 
         //Load Images from db
 
-        $username = $_GET['user'];
+        if (isset($_GET['user'])) {
+            $username = $_GET['user'];
 
-        $sql = "SELECT id, title, uploader, image_thumb FROM images WHERE uploader=?";
-        $stmt = mysqli_stmt_init($conn);
+            $sql = "SELECT id, title, uploader, image_thumb FROM images WHERE uploader=?";
+            $stmt = mysqli_stmt_init($conn);
 
-        if (mysqli_stmt_prepare($stmt, $sql)) {
-            mysqli_stmt_bind_param($stmt, 's', $username);
-            mysqli_stmt_execute($stmt);
-            mysqli_stmt_bind_result($stmt, $id, $title, $uploader, $image_thumb);
+            if (mysqli_stmt_prepare($stmt, $sql)) {
+                mysqli_stmt_bind_param($stmt, 's', $username);
+                mysqli_stmt_execute($stmt);
+                mysqli_stmt_bind_result($stmt, $id, $title, $uploader, $image_thumb);
 
-            while (mysqli_stmt_fetch($stmt)) {
-                echo '<a href="post.php?img=' . $id . '" class="image-link">
+                while (mysqli_stmt_fetch($stmt)) {
+                    echo '<a href="post.php?img=' . $id . '" class="image-link">
                 <div class="project">
                     <div class="overlay">
                         <div class="info">
@@ -66,6 +71,7 @@ if (isset($_GET['user'])) {
                     <img src="' . $image_thumb . '" alt="" class="image">
                 </div>
              </a>';
+                }
             }
         }
         ?>

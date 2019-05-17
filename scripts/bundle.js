@@ -81,4 +81,46 @@
     if (fileUploadInput != null) {
         fileUploadInput.addEventListener('change', addFileTitle);
     }
+
+    // Handles API call
+    // =================================================================================
+
+    function getClassicalImages() {
+        const classicPost = document.querySelector('.post-container');
+
+        const index = Math.floor(Math.random() * 60000);
+
+        fetch('https://collectionapi.metmuseum.org/public/collection/v1/objects/' + index)
+            .then(res => res.json())
+            .then(data => {
+                if (data.primaryImage == "" || data.primaryImage == undefined) getClassicalImages();
+                else {
+                    const info = `        
+                        <h1>${data.title}</h1>
+                        <h4>Date</h4>
+                        <div class="post--image-container">
+                            <img src="${data.primaryImage}" alt="upload">
+                        </div>
+                        <h4>Description</h4>
+                        <p class="description"><strong>Artist: </strong>${data.constituents ? data.constituents[0].name : "N/A"}</p>
+                        <p class="description"><strong>Medium: </strong>${data.medium ? data.medium : "N/A"}</p>
+                        <p class="description"><strong>Location: </strong>${data.repository ? data.repository : "N/A"}</p>
+                        <p class="description"><strong>Category: </strong>${data.classification ? data.classification : "N/A"}</p>
+                        <p class="description"><strong>Cultural Origin: </strong>${data.culture ? data.culture : "N/A"}</p>
+                        <p class="tags">View another randomly selected art piece courtesy of the Metropolitan Museum of Art.</p>
+                        <p class="tags"><a href="classic.php" rel=""><strong>New art piece</strong></a></p>
+                        `;
+                    
+                    classicPost.innerHTML = info;
+                }
+            });
+    }
+
+    const pages = document.URL.split('/');
+    const page = pages[pages.length - 1]; 
+
+    //Checks that the user is on the submissions/index page
+    if (page === 'classic.php') {
+        getClassicalImages();
+    }
 })();

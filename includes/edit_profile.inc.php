@@ -71,6 +71,9 @@ if (isset($_POST['submit']) && isset($_SESSION['uid'])) {
             header('Location: ../profile.php?user=' . $username);
         }
     }
+
+    mysqli_stmt_close($stmt);
+    mysqli_close($conn);
 } else {
     header('Location: ../index.php?exit');
     exit();

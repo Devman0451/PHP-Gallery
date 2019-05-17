@@ -20,6 +20,7 @@ if (isset($_GET['img'])) {
     }
 } else {
     header('Location: index.php');
+    exit();
 }
 ?>
 
@@ -72,6 +73,9 @@ if (isset($_GET['img'])) {
                         <input type="submit" name="submit" value="Submit" class="btn-subscribe">
                     </form>';
         }
+
+        mysqli_stmt_close($stmt);
+        mysqli_close($conn);
         ?>
     </div>
 </section>
