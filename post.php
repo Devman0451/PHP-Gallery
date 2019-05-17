@@ -66,6 +66,8 @@ if (isset($_GET['img'])) {
             </ul>
         </div>
         <?php
+        
+        //Let user comment if they're logged in
         if (isset($_SESSION['uid'])) {
             echo '<form action="includes/comment.inc.php" method="post" class="comment-form">
                         <input type="hidden" name="img_id" value="' . $id . '">

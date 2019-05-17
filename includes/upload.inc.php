@@ -47,7 +47,7 @@ if (isset($_POST['submit']) && isset($_SESSION['uid']) && $_POST['key'] === '2ND
 
     if (in_array($extension, $allowableExt)) {
         if ($imgError === 0) {
-            if ($imgSize < 1500000) {
+            if ($imgSize < 2000000) {
 
                 //Generate unique name and store in uploads folder
                 $imgUploadName = uniqid('', true) . ".$extension";

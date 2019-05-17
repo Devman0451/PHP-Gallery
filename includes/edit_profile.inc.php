@@ -25,11 +25,14 @@ if (isset($_POST['submit']) && isset($_SESSION['uid'])) {
         $imgExt = explode('.', $imgName);
         $extension = strtolower(end($imgExt));
 
-        $allowableExt = ['jpg', 'jpeg', 'png'];
+        $imageDimensions = getimagesize($imgTmpName); 
+
+        list($width, $height) = ['jpg', 'jpeg', 'png'];
 
         if (in_array($extension, $allowableExt)) {
             if ($imgError === 0) {
-                if ($imgSize <= 15000) {
+                //make sure width and height are 100px or less
+                if ($width <= 100 && $height <= 100) {
 
                     //Generate unique name and store in uploads folder
                     $iconUploadName = $username . '_' . uniqid('', true) . '.' . $extension;
