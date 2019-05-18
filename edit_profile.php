@@ -45,9 +45,9 @@ if (isset($_SESSION['uid']) && isset($_SESSION['id'])) {
 
         <form action="includes/edit_profile.inc.php" method="post" class="signup-form" enctype="multipart/form-data">
             <label for="last">* Location</label>
-            <input type="text" name="location"  value="<?php echo $location; ?>">
+            <input type="text" name="location"  value="<?php echo htmlspecialchars($location); ?>">
             <label for="uid">* Description</label>
-            <input type="text" name="description" value="<?php echo $description; ?>">
+            <input type="text" name="description" value="<?php echo  htmlspecialchars($description); ?>">
             <label>Profile Image</label>
             <label for="image" class="upload--fileupload">Select Image</label>
             <input type="file" name="image" id="image">

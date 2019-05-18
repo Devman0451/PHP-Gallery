@@ -24,8 +24,8 @@ include_once "navbar.php";
 
                     while (mysqli_stmt_fetch($stmt)) {
                         echo '<tr>
-                                <td><a href="profile.php?user=' . $profileName . '"><img src="' . $profileImg . '" alt="avatar" class="profile-icon"></a></td>
-                                <td><a href="profile.php?user=' . $profileName . '">' . $profileName . '</a></td>
+                                <td><a href="profile.php?user=' .  htmlspecialchars($profileName) . '"><img src="' .  htmlspecialchars($profileImg) . '" alt="avatar" class="profile-icon"></a></td>
+                                <td><a href="profile.php?user=' .  htmlspecialchars($profileName) . '">' .  htmlspecialchars($profileName) . '</a></td>
                                 <td>' . date("m/d/y h:i:s A", strtotime($createdAt)) . '</td>
                             </tr>';
                     }

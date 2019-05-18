@@ -43,9 +43,9 @@
                 mysqli_stmt_fetch($stmt);
             }
 
-            echo '<img src="' . $profileImg . '" alt="profile" class="avatar">       
+            echo '<img src="' .  htmlspecialchars($profileImg) . '" alt="profile" class="avatar">       
                 <li class="profile-item">
-                    <a href="profile.php?user=' . $_SESSION['uid'] . '" class="link--header">My Profile</a>
+                    <a href="profile.php?user=' .  htmlspecialchars($_SESSION['uid']) . '" class="link--header">My Profile</a>
                     <ul class="dropdown">
                         <li><a href="edit_profile.php" class="link--header">Edit Profile</a></li>
                         <li><a href="upload.php" class="link--header">Upload</a></li>

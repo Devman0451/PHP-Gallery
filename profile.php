@@ -32,11 +32,11 @@ include_once "navbar.php";
         background-size: cover;
         background-repeat: no-repeat;
         ">
-        <img src="<?php echo $profileImg; ?>" alt="profile icon" class="profile-icon">
+        <img src="<?php echo  htmlspecialchars($profileImg); ?>" alt="profile icon" class="profile-icon">
         <div class="profile-info">
-            <h1> <?php echo $profileName; ?> </h1>
-            <p> <?php echo $description; ?> </p>
-            <p> <?php echo $location; ?> </p>
+            <h1> <?php echo  htmlspecialchars($profileName); ?> </h1>
+            <p> <?php echo  htmlspecialchars($description); ?> </p>
+            <p> <?php echo  htmlspecialchars($location); ?> </p>
         </div>
     </div>
     <div class="gallery">
@@ -61,14 +61,14 @@ include_once "navbar.php";
                 <div class="project">
                     <div class="overlay">
                         <div class="info">
-                            <img src="' . $profileImg . '" alt="profile" class="avatar">
+                            <img src="' .  htmlspecialchars($profileImg) . '" alt="profile" class="avatar">
                             <div class="image-info">
-                                <div class="title">' . $title . '</div>
-                                <div class="author">' . $uploader . '</div>
+                                <div class="title">' .  htmlspecialchars($title) . '</div>
+                                <div class="author">' .  htmlspecialchars($uploader) . '</div>
                             </div>
                         </div>
                     </div>
-                    <img src="' . $image_thumb . '" alt="" class="image">
+                    <img src="' .  htmlspecialchars($image_thumb) . '" alt="" class="image">
                 </div>
              </a>';
                 }

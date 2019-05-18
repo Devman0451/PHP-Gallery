@@ -26,14 +26,14 @@ if (isset($_GET['img'])) {
 
 <section class="post">
     <div class="post-container">
-        <h1><?php echo $title; ?> <span>by</span> <?php echo $uploader; ?></h1>
+        <h1><?php echo $title; ?> <span>by</span> <?php echo  htmlspecialchars($uploader); ?></h1>
         <h4><?php echo $date; ?></h4>
         <div class="post--image-container">
-            <img src="<?php echo $image_url; ?>" alt="upload">
+            <img src="<?php echo  htmlspecialchars($image_url); ?>" alt="upload">
         </div>
         <h4>Description</h4>
-        <p class="description"><?php echo $description; ?>.</p>
-        <p class="tags"><strong>Tags: </strong><?php echo $tags; ?></p>
+        <p class="description"><?php echo  htmlspecialchars($description); ?>.</p>
+        <p class="tags"><strong>Tags: </strong><?php echo  htmlspecialchars($tags); ?></p>
         <div class="comments">
             <h4>Comments</h4>
             <ul class="comments-list">
@@ -53,8 +53,8 @@ if (isset($_GET['img'])) {
                         while(mysqli_stmt_fetch($stmt)) {
                             echo '<li>
                                     <div class="comment-single">
-                                        <p>' . $commentUser . '<span> on </span>' . date("m/d/y", strtotime($createdAt)) . '</p>
-                                        <p>' . $comment . '</p>
+                                        <p>' .  htmlspecialchars($commentUser) . '<span> on </span>' . date("m/d/y", strtotime($createdAt)) . '</p>
+                                        <p>' .  htmlspecialchars($comment) . '</p>
                                     </div>
                                 </li>';
                         };

@@ -66,18 +66,18 @@ include_once "navbar.php";
                     echo '<p class="search-msg">No Results Found</p>';
                 } else {
                     while (mysqli_stmt_fetch($stmt)) {
-                        echo '<a href="post.php?img=' . $id . '" class="image-link">
+                        echo '<a href="post.php?img=' .  htmlspecialchars($id) . '" class="image-link">
                                 <div class="project">
                                     <div class="overlay">
                                         <div class="info">
-                                            <img src="' . $profileImg . '" alt="profile" class="avatar">
+                                            <img src="' .  htmlspecialchars($profileImg) . '" alt="profile" class="avatar">
                                             <div class="image-info">
-                                                <div class="title">' . $title . '</div>
-                                                <div class="author">' . $uploader . '</div>
+                                                <div class="title">' .  htmlspecialchars($title) . '</div>
+                                                <div class="author">' .  htmlspecialchars($uploader) . '</div>
                                             </div>
                                         </div>
                                     </div>
-                                    <img src="' . $image_thumb . '" alt="" class="image">
+                                    <img src="' .  htmlspecialchars($image_thumb) . '" alt="" class="image">
                                 </div>
                              </a>';
                     }
@@ -96,18 +96,18 @@ include_once "navbar.php";
                 mysqli_stmt_bind_result($stmt, $id, $title, $uploader, $image_thumb, $profileImg);
     
                 while (mysqli_stmt_fetch($stmt)) {
-                    echo '<a href="post.php?img=' . $id . '" class="image-link">
+                    echo '<a href="post.php?img=' .  htmlspecialchars($id) . '" class="image-link">
                             <div class="project">
                                 <div class="overlay">
                                     <div class="info">
-                                        <img src="' . $profileImg . '" alt="profile" class="avatar">
+                                        <img src="' .  htmlspecialchars($profileImg) . '" alt="profile" class="avatar">
                                         <div class="image-info">
-                                            <div class="title">' . $title . '</div>
-                                            <div class="author">' . $uploader . '</div>
+                                            <div class="title">' .  htmlspecialchars($title) . '</div>
+                                            <div class="author">' .  htmlspecialchars($uploader) . '</div>
                                         </div>
                                     </div>
                                 </div>
-                                <img src="' . $image_thumb . '" alt="" class="image">
+                                <img src="' .  htmlspecialchars($image_thumb) . '" alt="" class="image">
                             </div>
                          </a>';
                 }
@@ -123,18 +123,18 @@ include_once "navbar.php";
                 mysqli_stmt_bind_result($stmt, $id, $title, $uploader, $image_thumb, $profileImg);
     
                 while (mysqli_stmt_fetch($stmt)) {
-                    echo '<a href="post.php?img=' . $id . '" class="image-link">
+                    echo '<a href="post.php?img=' .  htmlspecialchars($id) . '" class="image-link">
                             <div class="project">
                                 <div class="overlay">
                                     <div class="info">
-                                        <img src="' . $profileImg . '" alt="profile" class="avatar">
+                                        <img src="' .  htmlspecialchars($profileImg) . '" alt="profile" class="avatar">
                                         <div class="image-info">
-                                            <div class="title">' . $title . '</div>
-                                            <div class="author">' . $uploader . '</div>
+                                            <div class="title">' .  htmlspecialchars($title) . '</div>
+                                            <div class="author">' .  htmlspecialchars($uploader) . '</div>
                                         </div>
                                     </div>
                                 </div>
-                                <img src="' . $image_thumb . '" alt="" class="image">
+                                <img src="' .  htmlspecialchars($image_thumb) . '" alt="" class="image">
                             </div>
                          </a>';
                 }
